@@ -1,17 +1,46 @@
-// Define a general structure for address data
-export interface Address {
-  street?: string;
-  city: string;
-  country: string;
+export interface CardProps {
+    title: string;
+    content: string;
 }
 
-// Define a structure for a property listing
-export interface PropertyListing {
-  id: string;
-  name: string;
-  image: string;
-  price: number;
-  rating: number;
-  address: Address;
-  
+export interface PostModalProps {
+    onSubmit: (post: CardProps) => void;
+    onClose: () => void;
+}
+
+export interface ButtonProps {
+    size: "w-sm" | "w-md" | "w-lg";
+    shape: "rounded-sm" | "rounded-md" | "rounded-full";
+    title: "small" | "medium" | "large";
+}
+
+export interface PostProps {
+    userId: number,
+    title: string,
+    content: string;
+}
+
+
+export interface UserProps {
+    id: number;
+    name: string;
+    username: string;
+    email: string;
+    address: {
+        street: string;
+        suite: string;
+        city: string;
+        zipcode: string;
+        geo: {
+            lat: string;
+            lng: string;
+        }
+    },
+    phone: string;
+    website: string;
+    company: {
+        name: string;
+        catchPhrase: string;
+        bs: string;
+    }
 }

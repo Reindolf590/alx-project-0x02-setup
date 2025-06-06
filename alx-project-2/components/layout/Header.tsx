@@ -1,6 +1,6 @@
 import Link from "next/link"
 
-const Header = () => {
+const Header: React.FC = () => {
   return (
     <header className="w-full bg-blue-600 text-white p-4 text-center flex justify-between">
       <h2 className="text-xl">ALX Project 2 Header</h2>

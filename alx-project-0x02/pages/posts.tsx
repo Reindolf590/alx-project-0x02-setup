@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import Header from '../components/layout/Header';
+import Header from '@/components/layout/Header';
 import { PostProps } from '@/interfaces';
 import PostCard from '@/components/common/PostCard';
 import { useEffect, useState } from 'react';
